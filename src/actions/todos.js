@@ -1,0 +1,1 @@
+export const addToDo = text => ({ type: 'ADD', text });

@@ -8,6 +8,8 @@ import './index.css';
 
 const store = createStore(appReducers);
 
+store.subscribe(() => console.log(store.getState()));
+
 const template = <Provider store={store}><App /></Provider>;
 
 render( template, document.querySelector('#root') );

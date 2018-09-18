@@ -1,5 +1,14 @@
 const todos = (state = [], action) => {
-    return state;
+    switch (action.type) {
+        case 'ADD':
+            return [
+                ...state, 
+                { id: state.length, text: action.text, completed: false } 
+            ];
+
+        default:
+            return state;
+    }
 }
 
 export default todos;
