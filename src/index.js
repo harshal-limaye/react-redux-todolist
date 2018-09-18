@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './components/App';
+import appReducers from './reducers/index';
 import './index.css';
 
-const root = document.querySelector('#root');
+const store = createStore(appReducers);
 
-const template = (
-    <App />
-)
+const template = <Provider store={store}><App /></Provider>;
 
-ReactDOM.render( template, root );
+render( template, document.querySelector('#root') );
