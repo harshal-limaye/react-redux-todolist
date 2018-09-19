@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Todo from './Todo';
+import { completeToDO, deleteToDO } from '../actions/todos';
 
 class TodoItems extends React.Component {
 
@@ -10,7 +11,14 @@ class TodoItems extends React.Component {
             <div className="todo-items">
                 <ul>
                     {
-                        this.props.todos.map((todo) => <Todo key={todo.id} todo={todo} />)
+                        this.props.todos.map((todo) => {
+                            <Todo 
+                                onDelete={this.delete} 
+                                onComplete={this.complete} 
+                                key={todo.id} 
+                                todo={todo} 
+                            />                            
+                        })
                     }
                 </ul>
             </div>
@@ -23,4 +31,9 @@ const mapStateToProps = (state) => ({
     todos: state.todos
 });
 
-export default connect(mapStateToProps)(TodoItems);
+const mapDispatchToProps = (dispatch) => ({
+    delete: id => dispatch(deleteToDO(id)),
+    complete: id => dispatch(completeToDO(id))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoItems);
