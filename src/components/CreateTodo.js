@@ -6,7 +6,7 @@ class CreateTodo extends React.Component {
     render () {
         return (
             <div className="todo-create">
-                <input type="text" onKeyDown={this.handleEnter} />
+                <input type="text" onKeyDown={this.handleEnter} placeholder="Task..." />
             </div>
         );
     }

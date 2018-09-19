@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import CreateTodo from './CreateTodo';
-import TodoItems from './TodoItems';
+import TodoList from './TodoList';
 
 export default class App extends React.Component {
     render() {
@@ -10,7 +10,7 @@ export default class App extends React.Component {
                 <div className="todo-app">
                     <Header />
                     <CreateTodo />
-                    <TodoItems />
+                    <TodoList />
                 </div>
             </div>
         );

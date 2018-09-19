@@ -10,9 +10,36 @@ body {
 }
 .todo-app {
     margin: 0 auto;
-    width: 250px;
+    width: 600px;
+    padding: 25px;
+    background-color: #ffffff;
 }
 .todo-header h1 {
     color: #af2f2f26;
     text-transform: uppercase;
+}
+.todo-create input {
+    border: 2px solid #c3c3c3;
+    width: 100%;
+    padding: 5px;
+}
+.todo-items ul {
+    padding: 0px;
+}
+.todo-items ul li {
+    list-style-type: none;
+    font-size: 20px;
+    word-break: break-all;
+}
+button.btn {
+    margin-left: 5px;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+}
+.btn-delete {
+    background-color: #ff0000;
+}
+.btn-complete {
+    background-color: #16a085;
 }
