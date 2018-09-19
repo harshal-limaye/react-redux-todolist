@@ -6,7 +6,7 @@ body {
 }
 .container {
     width: 100%;
-    padding: 50px;
+    padding: 50px 0;
 }
 .todo-app {
     margin: 0 auto;
@@ -17,6 +17,15 @@ body {
 .todo-header h1 {
     color: #af2f2f26;
     text-transform: uppercase;
+}
+.todo-header ul.filters {
+    padding: 0px;
+}
+.todo-header ul.filters li {
+    display: inline-block;
+    font-size: 12px;
+    list-style-type: none;
+    padding-right: 5px;
 }
 .todo-create input {
     border: 2px solid #c3c3c3;
@@ -30,6 +39,9 @@ body {
     list-style-type: none;
     font-size: 20px;
     word-break: break-all;
+}
+.todo-items ul li.complete {
+    text-decoration: line-through;
 }
 button.btn {
     margin-left: 5px;
