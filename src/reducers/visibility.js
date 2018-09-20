@@ -1,5 +1,10 @@
-const visibility = (state = [], action) => {
-    return state;
+const visibility = (state = 'ALL', action) => {
+    switch (action.type) {
+        case 'SET_VISIBILITY_FILTER':
+            return action.filter;
+        default:
+            return state;
+    }
 }
 
 export default visibility;

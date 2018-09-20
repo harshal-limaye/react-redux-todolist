@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { completeToDO, deleteToDO } from '../actions/todos';
 
 class Todo extends React.Component {
     render() {
