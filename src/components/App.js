@@ -1,18 +1,27 @@
+// system
 import React from 'react';
-import Header from './Header';
-import CreateTodo from './CreateTodo';
-import TodoList from './TodoList';
 
-export default class App extends React.Component {
+// components
+import Header from './Header';
+import CreateTodo from '../containers/CreateTodo';
+import VisibleTodoList from '../containers/VisibleTodoList';
+
+class App extends React.Component {
     render() {
         return (
             <div className="container">
                 <div className="todo-app">
                     <Header />
                     <CreateTodo />
-                    <TodoList />
+                    <VisibleTodoList 
+                        todos={this.props.todos}
+                        onDelete={this.props.delete}
+                        onComplete={this.props.complete}
+                    />
                 </div>
             </div>
         );
     }
 }
+
+export default App;
