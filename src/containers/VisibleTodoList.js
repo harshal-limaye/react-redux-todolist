@@ -2,8 +2,22 @@ import { connect } from 'react-redux';
 import { completeToDO, deleteToDO } from '../actions/todos';
 import TodoList from '../components/TodoList';
 
+
+const getFilteredTodos = ({ todos, visibility }) => {
+    switch (visibility) {
+        case 'ALL':
+            return todos;
+        case 'ACTIVE':
+            return todos.filter(t => !t.completed);
+        case 'COMPLETED':
+            return todos.filter(t => t.completed);
+        default:
+            throw new Error('Unknown filter: ' + visibility);
+    }
+}
+
 const mapStateToProps = (state) => ({
-    todos: state.todos || []
+    todos: getFilteredTodos(state) || []
 });
 
 const mapDispatchToProps = (dispatch) => ({
