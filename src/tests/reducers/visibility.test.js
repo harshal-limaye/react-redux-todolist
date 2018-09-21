@@ -9,7 +9,12 @@ describe('testing visibility reducer', () => {
     });
 
     test('should set filter', () => {
-        const state = visibilityReducer(todos, { type: 'SET_VISIBILITY_FILTER', filter: 'ACTIVE' });
+        const state = visibilityReducer('ALL', { type: 'SET_VISIBILITY_FILTER', filter: 'ACTIVE' });
         expect(state).toBe('ACTIVE');
+    });
+
+    test('should set default filter if incorrect type', () => {
+        const state = visibilityReducer(undefined, { type: 'INCORRECT_FILTER', filter: 'ACTIVE' });
+        expect(state).toBe('ALL');
     });
 });
