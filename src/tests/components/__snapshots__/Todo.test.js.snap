@@ -2,14 +2,14 @@
 
 exports[`testing todo component should render todo component correctly 1`] = `
 <li
-  className=""
+  className="complete"
 >
   <input
-    defaultChecked={false}
+    defaultChecked={true}
     onClick={[Function]}
     type="checkbox"
   />
-  release next version
+  Write test cases
   <button
     className="btn btn-delete"
     onClick={[Function]}
