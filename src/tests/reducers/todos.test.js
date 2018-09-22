@@ -23,12 +23,12 @@ describe('testing todos reducer', () => {
 
     test('should mark a todo item as completed', () => {
         const updatedTodos = applyReducer(todos, { type: 'COMPLETE', id: 0 });
-        expect(updatedTodos[0].completed).toBe(true);
+        expect(updatedTodos[3].completed).toBe(true);
     });
 
     test('should mark a todo item as incomplete', () => {
         const updatedTodos = applyReducer(todos, { type: 'COMPLETE', id: 3 });
-        expect(updatedTodos[3].completed).toBe(false);
+        expect(updatedTodos[0].completed).toBe(false);
     });
 
     test('should delete a todo item', () => {

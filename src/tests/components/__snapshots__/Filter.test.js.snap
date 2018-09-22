@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Filter component should render component correctly 1`] = `
+<ul
+  className="filters"
+>
+  <li
+    className="active"
+    onClick={[Function]}
+  >
+    All
+  </li>
+  <li>
+    /
+  </li>
+  <li
+    className=""
+    onClick={[Function]}
+  >
+    Active
+  </li>
+  <li>
+    /
+  </li>
+  <li
+    className=""
+    onClick={[Function]}
+  >
+    Completed
+  </li>
+</ul>
+`;
