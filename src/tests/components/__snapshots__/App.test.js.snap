@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing app component should render component correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="todo-app"
+  >
+    <Header />
+    <Connect(CreateTodo) />
+    <Connect(ToDoList) />
+  </div>
+</div>
+`;
