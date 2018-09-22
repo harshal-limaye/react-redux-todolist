@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing todo component should render todo component correctly 1`] = `
+<li
+  className=""
+>
+  <input
+    defaultChecked={false}
+    onClick={[Function]}
+    type="checkbox"
+  />
+  release next version
+  <button
+    className="btn btn-delete"
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</li>
+`;
