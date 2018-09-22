@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing todolist component should render todolist component with todos 1`] = `
+<div
+  className="todo-items"
+>
+  <ul>
+    <Todo
+      key="3"
+      todo={
+        Object {
+          "completed": true,
+          "id": 3,
+          "text": "Write test cases",
+        }
+      }
+    />
+    <Todo
+      key="2"
+      todo={
+        Object {
+          "completed": false,
+          "id": 2,
+          "text": "create container components",
+        }
+      }
+    />
+    <Todo
+      key="1"
+      todo={
+        Object {
+          "completed": false,
+          "id": 1,
+          "text": "fix bugs",
+        }
+      }
+    />
+    <Todo
+      key="0"
+      todo={
+        Object {
+          "completed": false,
+          "id": 0,
+          "text": "release next version",
+        }
+      }
+    />
+  </ul>
+</div>
+`;
+
+exports[`testing todolist component should render todolist component without todos 1`] = `
+<div
+  className="todo-items"
+>
+  <ul />
+</div>
+`;
