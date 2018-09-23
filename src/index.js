@@ -4,11 +4,12 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import appReducers from './reducers/index';
+import { getState, setState } from './localStorage';
 import './index.css';
 
-const store = createStore(appReducers);
+const store = createStore(appReducers, getState());
 
-store.subscribe(() => console.log(store.getState()));
+store.subscribe(() => setState({ todos: store.getState().todos }));
 
 const template = <Provider store={store}><App /></Provider>;
 
