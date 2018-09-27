@@ -3,7 +3,7 @@ import { completeToDO, deleteToDO } from '../actions/todos';
 import TodoList from '../components/TodoList';
 
 
-const getFilteredTodos = ({ todos, visibility }) => {
+export const getFilteredTodos = ({ todos, visibility }) => {
     switch (visibility) {
         case 'ALL':
             return todos;
