@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing create todo component should render create todo properly 1`] = `
+<div
+  className="todo-create"
+>
+  <input
+    onKeyDown={[Function]}
+    placeholder="Task..."
+    type="text"
+  />
+</div>
+`;

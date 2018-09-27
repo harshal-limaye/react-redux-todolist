@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addToDo } from '../actions/todos';
 
-class CreateTodo extends React.Component {
+export class CreateTodo extends React.Component {
     render () {
         return (
             <div className="todo-create">
