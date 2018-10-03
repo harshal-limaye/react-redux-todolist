@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Todo extends React.Component {
     render() {
@@ -17,9 +18,17 @@ class Todo extends React.Component {
         );
     }
 
-    onComplete = id => this.props.onComplete(this.props.todo.id);
+    onComplete = () => this.props.onComplete(this.props.todo.id);
 
-    onDelete = id => this.props.onDelete(this.props.todo.id);
+    onDelete = () => this.props.onDelete(this.props.todo.id);
+}
+
+Todo.propTypes = {
+    todo: PropTypes.shape({
+        completed: PropTypes.bool,
+        id: PropTypes.number,
+        text: PropTypes.string
+    })
 }
 
 export default Todo;
