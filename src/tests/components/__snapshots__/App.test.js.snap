@@ -7,7 +7,9 @@ exports[`testing app component should render component correctly 1`] = `
   <div
     className="todo-app"
   >
-    <Header />
+    <Header
+      appTitle="toDoList"
+    />
     <Connect(CreateTodo) />
     <Connect(ToDoList) />
   </div>
