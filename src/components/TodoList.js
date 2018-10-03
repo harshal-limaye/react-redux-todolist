@@ -1,6 +1,6 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import Todo from './Todo';
-
 
 class ToDoList extends React.Component {
 
@@ -24,6 +24,10 @@ class ToDoList extends React.Component {
             </div>
         );
     }
+}
+
+ToDoList.propTypes = {
+    todos: Proptypes.arrayOf(Proptypes.object)
 }
 
 export default ToDoList;
